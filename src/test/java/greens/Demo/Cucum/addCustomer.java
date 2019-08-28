@@ -78,7 +78,7 @@ public void add_customer_details(io.cucumber.datatable.DataTable dataTable) {
 }*/
 
 //ONE DIMENSIONAL USING MAP 
-@When("Add customer details")
+/*@When("Add customer details")
 public void add_customer_details(io.cucumber.datatable.DataTable dataTable) {
 driver.manage().window().maximize();
 Map<String, String> oned = dataTable.asMap(String.class, String.class);
@@ -88,6 +88,32 @@ driver.findElement(By.id("lname")).sendKeys(oned.get("lname"));
 driver.findElement(By.id("email")).sendKeys(oned.get("email"));
 driver.findElement(By.name("addr")).sendKeys(oned.get("address"));
 driver.findElement(By.id("telephoneno")).sendKeys(oned.get("phoneno"));
+driver.findElement(By.name("submit")).click();
+}*/
+
+//TWO DIMENSIONAL LIST CODE
+/*@When("Add customer details")
+public void add_customer_details(io.cucumber.datatable.DataTable dataTable) {
+    List<List<String>> twodlist = dataTable.asLists(String.class);
+    driver.findElement(By.xpath("//label[text()='Done']")).click();
+	driver.findElement(By.id("fname")).sendKeys(twodlist.get(0).get(0));
+	driver.findElement(By.id("lname")).sendKeys(twodlist.get(0).get(1));
+	driver.findElement(By.id("email")).sendKeys(twodlist.get(0).get(2));
+	driver.findElement(By.name("addr")).sendKeys(twodlist.get(1).get(3));
+	driver.findElement(By.id("telephoneno")).sendKeys(twodlist.get(1).get(4));
+	driver.findElement(By.name("submit")).click();
+}*/
+
+//TWO DIMENSIONAL MAP CODE	
+@When("Add customer details")
+public void add_customer_details(io.cucumber.datatable.DataTable dataTable) {
+List<Map<String, String>> twodmap = dataTable.asMaps(String.class, String.class);   
+driver.findElement(By.xpath("//label[text()='Done']")).click();
+driver.findElement(By.id("fname")).sendKeys(twodmap.get(0).get("fname"));
+driver.findElement(By.id("lname")).sendKeys(twodmap.get(0).get("lname"));
+driver.findElement(By.id("email")).sendKeys(twodmap.get(1).get("email"));
+driver.findElement(By.name("addr")).sendKeys(twodmap.get(0).get("address"));
+driver.findElement(By.id("telephoneno")).sendKeys(twodmap.get(2).get("phoneno"));
 driver.findElement(By.name("submit")).click();
 }
 
