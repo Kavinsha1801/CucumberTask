@@ -4,10 +4,7 @@ Feature: Title of your feature
 
   @tag1
   Scenario: Add a customer
-    Given Launch the chrome browser
-    And click the Addd customer link
-    When Add customer details
-      | Kavin  | raj   | kavin@gmail.com    | pondy       |   812212333 |
-      | Balaji | ravi  | balai@gmail.com    | pondicherry |  8838258963 |
-      | Guna   | balan | gunachan@gmail.com | nettapkm    | 96775470262 |
-    Then generate the customer id and display
+    Given launch chrome browser
+    And click the tarif plan link
+    When Add tarif plan details
+    Then verify the tarif detail and display
