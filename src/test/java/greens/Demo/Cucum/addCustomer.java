@@ -21,7 +21,7 @@ public void launch_the_chrome_browser() {
 		
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\hemakavin\\Desktop\\selenium\\Airline\\driver\\chromedriver.exe");
     driver = new ChromeDriver(); 
-   driver.get("http://demo.guru99.com/telecom/");
+   driver.get("http://demo.guru99.com//telecom");
    }
 
 @Given("click the Addd customer link")

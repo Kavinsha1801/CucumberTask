@@ -1,0 +1,99 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Add a customer",
+        "description": "",
+        "id": "title-of-your-feature;add-a-customer",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 18350271545,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Launch the chrome browser",
+            "match": {
+              "location": "addCustomer.launch_the_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4748319669,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click the Addd customer link",
+            "match": {
+              "location": "addCustomer.click_the_Addd_customer_link()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15502075366,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Add customer details",
+            "match": {
+              "location": "addCustomer.add_customer_details(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "kavin",
+                  "raj",
+                  "kavin@gmail.com",
+                  "pondy",
+                  "81222123321"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 580238089,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "generate the customer id and display",
+            "match": {
+              "location": "addCustomer.generate_the_customer_id_and_display()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag2"
+          }
+        ]
+      }
+    ],
+    "name": "Title of your feature",
+    "description": "  I want to use this template for my feature file",
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "uri": "src/test/resources/feature/1dlist.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
